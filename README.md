@@ -25,7 +25,7 @@ Anda dapat mengakses ini melalui tautan berikut: [Demo Sistem Pakar](https://nur
 
 ## Kredit
 
-Artikel ini terinspirasi oleh karya berikut:
+Demo ini terinspirasi oleh karya berikut:
 
 **Judul Artikel**: Sistem Pakar dalam Mengidentifikasi Minat Vokasi Menggunakan Metode Certainty Factor dan Forward Chaining  
 **Penulis**: Jefdy Kurniawan¹, Sarjon Defit², Yuhandri Yunus³  
