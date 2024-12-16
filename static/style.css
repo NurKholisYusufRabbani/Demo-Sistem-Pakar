@@ -19,6 +19,8 @@ body {
   margin-bottom: 70px;
 }
 
+/* form */
+
 .form-group {
   justify-items: center;
   background: #ffffff;
@@ -43,12 +45,12 @@ body {
 }
 
 .form-control:focus {
-  border: 0.5px solid #0d0da5; 
-  outline: none; 
+  border: 0.5px solid #0d0da5;
+  outline: none;
 }
 
 .form-control:valid {
-  border: 0.5px solid #0d0da5; 
+  border: 0.5px solid #0d0da5;
 }
 
 .feather {
@@ -74,5 +76,110 @@ body {
   margin-right: 15px;
 }
 
+/* tabel */
 
+.table-container h2 {
+  color: #0d0da5;
+  text-align: center;
+  margin-bottom: 70px;
+}
 
+.table-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+}
+
+table {
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+}
+
+thead th {
+  background-color: #0d0da5;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  padding: 25px;
+  border: 1px solid #dee2e6;
+}
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+}
+
+/* tabel ganjil dan genap */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #fff;
+  appearance: none;
+  text-align: center;
+}
+
+select option {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+select option:hover {
+  background-color: #ff0202;
+  color: white;
+}
+
+select option:checked {
+  background-color: #0d0da5;
+  color: white;
+}
+
+select:focus {
+  border-color: #0d0da5;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.btn-primary {
+  border: none;
+  padding: 20px 30px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #0d0da5;
+  color: #ffff;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-primary:hover {
+  border: 1px solid #0d0da5;
+  background-color: transparent;
+  color: #0d0da5;
+
+}
