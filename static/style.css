@@ -179,6 +179,7 @@ select:focus {
 .btn-primary:hover {
   border: 1px solid #0d0da5;
   background-color: transparent;
+  cursor: pointer;
   color: #0d0da5;
 
 }
