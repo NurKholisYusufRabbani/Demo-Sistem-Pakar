@@ -1,93 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
+.mt-5 {
+  padding: 50px 100px;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
+.mt-5 h1 {
+  color: #0d0da5;
+  text-align: center;
+  margin-bottom: 70px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  justify-items: center;
+  background: #ffffff;
+  padding: 50px;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-bottom: 70px;
 }
 
-input[type="text"], select {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
+.form-control {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  border: 0.5px solid #ffff;
+  transition: all 0.5s ease-in-out;
 }
 
-.btn {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin: 20px auto;
+.form-control:hover {
+  border: 0.5px solid #0d0da5;
 }
 
-.btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+.form-control:focus {
+  border: 0.5px solid #0d0da5; 
+  outline: none; 
 }
 
-.btn:active {
-    transform: scale(0.95);
+.form-control:valid {
+  border: 0.5px solid #0d0da5; 
 }
 
-.result {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #555;
+.feather {
+  color: #0d0da5;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 15px;
-    }
-
-    select {
-        width: 100%;
-    }
+.form-nama {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12.5px;
 }
+
+.feather-user {
+  margin-right: 15px;
+}
+
+.form-nim {
+  display: flex;
+  align-items: center;
+}
+
+.feather-key {
+  margin-right: 15px;
+}
+
+
+
