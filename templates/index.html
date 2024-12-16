@@ -1,57 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistem Pakar Vokasi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container mt-5">
-        <h2>Sistem Pakar Minat Vokasi</h2>
-        <form method="POST">
-            <div class="form-group">
-                <label for="name">Nama:</label>
-                <input type="text" class="form-control" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="nim">NIM:</label>
-                <input type="text" class="form-control" name="nim" required>
-            </div>
-            <h4>Ciri-Ciri Minat Vokasi:</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Ciri-Ciri</th>
-                        <th>Skor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for cc_code, ciri in ciri_ciri.items() %}
-                        <tr>
-                            <td>{{ loop.index }}</td>
-                            <td>{{ ciri }}</td>
-                            <td>
-                                <select name="{{ cc_code }}">
-                                    <option value="pasti tidak">Pasti Tidak</option>
-                                    <option value="hampir pasti tidak">Hampir Pasti Tidak</option>
-                                    <option value="kemungkinan besar tidak">Kemungkinan Besar Tidak</option>
-                                    <option value="mungkin tidak">Mungkin Tidak</option>
-                                    <option value="tidak tahu">Tidak Tahu</option>
-                                    <option value="mungkin">Mungkin</option>
-                                    <option value="kemungkinan besar">Kemungkinan Besar</option>
-                                    <option value="hampir pasti">Hampir Pasti</option>
-                                    <option value="pasti">Pasti</option>
-                                </select>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <button type="submit" class="btn btn-primary">Jalankan Sistem Pakar</button>
-        </form>
+      <h1>Sistem Pakar Minat Vokasi</h1>
+      <form method="POST">
+        <div class="form-group">
+          <div class="form-nama">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-user"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-nim">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-key"
+            >
+              <path
+                d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"
+              ></path>
+            </svg>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter your student ID"
+              name="nim"
+              required
+            />
+          </div>
+        </div>
+        <table class="table-minat">
+            <h2>Ciri-Ciri Minat Vokasi:</h2>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Ciri-Ciri</th>
+              <th>Skor</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cc_code, ciri in ciri_ciri.items() %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ ciri }}</td>
+              <td>
+                <select name="{{ cc_code }}">
+                  <option value="pasti tidak">Pasti Tidak</option>
+                  <option value="hampir pasti tidak">Hampir Pasti Tidak</option>
+                  <option value="kemungkinan besar tidak">
+                    Kemungkinan Besar Tidak
+                  </option>
+                  <option value="mungkin tidak">Mungkin Tidak</option>
+                  <option value="tidak tahu">Tidak Tahu</option>
+                  <option value="mungkin">Mungkin</option>
+                  <option value="kemungkinan besar">Kemungkinan Besar</option>
+                  <option value="hampir pasti">Hampir Pasti</option>
+                  <option value="pasti">Pasti</option>
+                </select>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">
+          Jalankan Sistem Pakar
+        </button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
