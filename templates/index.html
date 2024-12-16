@@ -75,42 +75,54 @@
             />
           </div>
         </div>
-        <table class="table-minat">
-            <h2>Ciri-Ciri Minat Vokasi:</h2>
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Ciri-Ciri</th>
-              <th>Skor</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for cc_code, ciri in ciri_ciri.items() %}
-            <tr>
-              <td>{{ loop.index }}</td>
-              <td>{{ ciri }}</td>
-              <td>
-                <select name="{{ cc_code }}">
-                  <option value="pasti tidak">Pasti Tidak</option>
-                  <option value="hampir pasti tidak">Hampir Pasti Tidak</option>
-                  <option value="kemungkinan besar tidak">
-                    Kemungkinan Besar Tidak
-                  </option>
-                  <option value="mungkin tidak">Mungkin Tidak</option>
-                  <option value="tidak tahu">Tidak Tahu</option>
-                  <option value="mungkin">Mungkin</option>
-                  <option value="kemungkinan besar">Kemungkinan Besar</option>
-                  <option value="hampir pasti">Hampir Pasti</option>
-                  <option value="pasti">Pasti</option>
-                </select>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-        <button type="submit" class="btn btn-primary">
-          Jalankan Sistem Pakar
-        </button>
+
+        <div class="table-container">
+          <h2>Ciri-Ciri Minat Vokasi</h2>
+          <div class="table-main">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Ciri-Ciri</th>
+                  <th>Skor</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for cc_code, ciri in ciri_ciri.items() %}
+                <tr>
+                  <td>{{ loop.index }}</td>
+                  <td>{{ ciri }}</td>
+                  <td>
+                    <select name="{{ cc_code }}">
+                      <option value="pasti tidak">Pasti Tidak</option>
+                      <option value="hampir pasti tidak">
+                        Hampir Pasti Tidak
+                      </option>
+                      <option value="kemungkinan besar tidak">
+                        Kemungkinan Besar Tidak
+                      </option>
+                      <option value="mungkin tidak">Mungkin Tidak</option>
+                      <option value="tidak tahu">Tidak Tahu</option>
+                      <option value="mungkin">Mungkin</option>
+                      <option value="kemungkinan besar">
+                        Kemungkinan Besar
+                      </option>
+                      <option value="hampir pasti">Hampir Pasti</option>
+                      <option value="pasti">Pasti</option>
+                    </select>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button type="submit" class="btn btn-primary">
+            Jalankan Sistem Pakar
+          </button>
+        </div>
       </form>
     </div>
   </body>
