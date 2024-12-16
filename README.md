@@ -19,10 +19,6 @@ Sebelum menjalankan aplikasi ini, pastikan Anda telah menginstal hal-hal berikut
 - mysql-connector-python
 - Bootstrap (diimpor melalui CDN)
 
-## Page
-
-Anda dapat mengakses ini melalui tautan berikut: [Demo Sistem Pakar](https://nurkholisyusufrabbani.github.io/Demo-Sistem-Pakar/)
-
 ## Kredit
 
 Demo ini terinspirasi oleh karya berikut:
