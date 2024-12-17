@@ -4,11 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hasil Sistem Pakar</title>
+    <style>
+      /* Progress Bar Style */
+      .progress-container {
+          width: 50%;
+          background-color: #ddd;
+          border-radius: 20px;
+          margin: 30px auto;
+          overflow: hidden;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .progress-bar {
+          height: 30px;
+          background-color: #0d0da5;
+          text-align: center;
+          line-height: 30px;
+          color: white;
+          font-weight: bold;
+          transition: width 0.5s ease-in-out;
+      }
+
+      h1, p {
+          text-align: center;
+      }
+  </style>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='result.css') }}"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,14 +40,36 @@
       rel="stylesheet"
     />
   </head>
+
+  <header>
+      <div class="logo-header">
+        <img src="static/image/UNESA.jpg" alt="Logo Unesa" />
+        <img src="static/image/Logo Vokasi.jpg" alt="Logo Fakultas Vokasi" />
+        <img src="static/image/Logo MI.jpg" alt="Logo Prodi Manajemen Informatika" />
+      </div>
+  </header>
+  
   <body>
     <div class="container mt-5">
       <h1>Hasil Sistem Pakar</h1>
       <p>{{ result }}</p>
 
-      <div class="button-container">
-        <a href="/" class="btn btn-secondary">Kembali ke Halaman Awal</a>
+      {% if result %}
+      <div class="progress-container">
+          <!-- Ambil tingkat kepastian dari string hasil -->
+          {% set kepastian = result.split('dengan tingkat kepastian')[1].strip().replace('%', '').replace(',', '.').split()[0] | float %}
+          <div class="progress-bar" style="width: {{ kepastian }}%;">
+              {{ kepastian }}%
+          </div>
+      </div>
+      {% endif %}
+  
+      <!-- Tombol Kembali -->
+      <div style="text-align: center; margin-top: 20px;">
+          <a href="/" style="text-decoration: none; background-color: #0d0da5; color: white; padding: 10px 20px; border-radius: 5px;">Kembali</a>
       </div>
     </div>
   </body>
 </html>
+
+

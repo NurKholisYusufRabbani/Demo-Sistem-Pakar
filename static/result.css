@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-header img {
+  width: 60px; /* Ukuran logo */
+  height: auto;
+  margin-right: 15px; /* Jarak antar logo */
+  border-radius: 8px; /* Efek rounded */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
