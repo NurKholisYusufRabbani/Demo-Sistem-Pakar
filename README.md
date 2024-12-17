@@ -17,7 +17,6 @@ Sebelum menjalankan aplikasi ini, pastikan Anda telah menginstal hal-hal berikut
 - MySQL Server
 - Flask
 - mysql-connector-python
-- Bootstrap (diimpor melalui CDN)
 
 ## Kredit
 
